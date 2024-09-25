@@ -17,7 +17,11 @@ mongoose.connect(env.MONGO_URI)
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://image-uploader.lampe-kevin.com/',
+    credentials: true
+}));
+
 
 cloudinary.config({
     cloud_name: env.CLOUDINARY_CLOUD_NAME,
