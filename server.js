@@ -18,7 +18,7 @@ mongoose.connect(env.MONGO_URI)
 const app = express();
 
 app.use(cors({
-    origin: 'https://image-uploader.lampe-kevin.com/',
+    origin: 'https://image-uploader.lampe-kevin.com',
     credentials: true
 }));
 
